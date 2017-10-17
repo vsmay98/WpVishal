@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="logo.png" type="image/jpg" sizes="32x32">
+	<title>BloodBank</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/animate.css">
+  <link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="Style.css">
+ 
+
+<script type="text/javascript">
+	  $(window).scroll(function() {
+    if($(this).scrollTop() > 200)  /*height in pixels when the navbar becomes non opaque*/ 
+    {
+        $('.opaque-navbar').addClass('opaque');
+    } else {
+        $('.opaque-navbar').removeClass('opaque');
+    }
+});
+</script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<!--Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top opaque-navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+         <a class="navbar-brand" href="#myPage"><img src="7.jpg" width="100px" height="55px" style="margin-top: 0px !important;padding-top: 0px !important;height: 80px !important;display: inline;">ahf8asihfnsjdn </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right" style="padding-top: 10px;">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#aboutus">ABOUT US</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#workportfolio">WORK PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      
+        <li class="dropdown">
+          <a href="http://phpoll.com/register" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h3><b>Register</b></h3></div>
+              <form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+                <div class="form-group">
+                  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-6 col-xs-offset-3">
+                      <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+              </form>
+            </div>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+            <div class="col-lg-12">
+              <div class="text-center">
+                <h3><b>Log In</b></h3></div>
+              <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <input type="checkbox" tabindex="3" name="remember" id="remember">
+                      <label for="remember"> Remember Me</label>
+                    </div>
+                    <div class="col-xs-5 pull-right">
+                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="text-center">
+                        <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+              </form>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="hero-image" ></div>
+  <div >
+  <div class="content">
+  <div class="content__container">
+    <p class="content__container__text">
+      Hello
+    </p>
+    
+    <ul class="content__container__list">
+      <li class="content__container__list__item">world !</li>
+      <li class="content__container__list__item">bob !</li>
+      <li class="content__container__list__item">users !</li>
+      <li class="content__container__list__item">everybody !</li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+<br><br>
+
+<div class="container-fluid" style="width: 90%;margin-left: 5%;margin-right: 5%;border:1px solid white;box-shadow: 12px 0 15px -4px #eee, -12px 0 8px -4px #eee;color: black;">
+
+	<div class="row" style="text-align: center;padding: 10px;">
+	<div class="col-sm-6" >
+	<h2><span style="color: orange;"> Web</span> Development</h2>
+
+	</div>
+	<div class="col-sm-6">
+		<img src="1.jpg" width="80%" height="250px">
+	</div>
+	</div>
+	<div class="row" style="text-align: center;padding: 20px;">
+	<div class="col-sm-6">
+		<img src="1.jpg" width="80%" height="250px">
+	</div>
+	<div class="col-sm-6" >
+	<h2><span style="color: orange;"> Mobile</span> Development</h2>
+
+	</div>
+	</div>
+
+<!-- About Us -->
+
+	<div id="aboutus" class="container" style="background-image:url(2.jpg);background-size: cover; ;text-align: center;color: white;border-radius: 10px;">
+	<br><br><br>
+		<h1><span style="color: orange;"> Something</span> about us</h1>
+		<h3>We develope IT solutions for your business.</h3>
+		<p>Content</p>
+		<a href="#"><h3 style="border: 1px solid orange;border-radius: 10px;padding: 15px;padding-left:30px;padding-right: 30px;display: inline-block;color: #f4d742;"> Link 
+<i class="fa fa-arrow-right" aria-hidden="true"></i></h3></a>
+<br><br>
+<h1><span style="color: orange">Why</span> Us</h1>
+<p>- Content -</p><br>
+
+<div class="row" style="padding: 15px;">
+	<div class="col-sm-4">
+		<i class="fa fa-lightbulb-o fa-5x" ></i><br><h2>Analysis</h2>
+		<p>Content</p>
+	</div>
+	<div class="col-sm-4">
+		<i class="fa fa-briefcase fa-5x" ></i><br><h2>Team</h2>
+		<p>Content</p>
+	</div>	
+	<div class="col-sm-4">
+		<i class="fa fa-clock-o fa-5x" ></i><br><h2>Time</h2>
+		<p>Content</p>
+	</div>	
+</div>
+</div>
+
+<!-- Services -->
+
+<div id="services" class="container" style="text-align: center;padding: 20px;"><br><br>
+	<h1><span style="color: orange;"> Stages</span> Of Development</h1>
+<h3>
+	<div class="row" style="padding: 5%;">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-4">Content</div>
+		<div class="col-sm-2"><span> 1</span></div>
+		<div class="col-sm-3">Content</div>
+	</div>
+
+	<div class="row" style="padding: 5%;">
+		<div class="col-sm-3">Content</div>
+		<div class="col-sm-2"><span> 2</span></div>
+		<div class="col-sm-4">Content</div>
+		<div class="col-sm-3"></div>
+	</div>
+
+	<div class="row" style="padding: 5%;">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-4">Content</div>
+		<div class="col-sm-2"><span> 3</span></div>
+		<div class="col-sm-3">Content</div>
+	</div>
+
+	<div class="row" style="padding: 5%;">
+		<div class="col-sm-3">Content</div>
+		<div class="col-sm-2"><span> 4</span></div>
+		<div class="col-sm-4">Content</div>
+		<div class="col-sm-3"></div>
+	</div>	
+
+	<div class="row" style="padding: 5%;">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-4">Content</div>
+		<div class="col-sm-2"><span> 5</span></div>
+		<div class="col-sm-3">Content</div>
+
+	</div>		
+	<div class="row" style="padding: 5%;">
+		<div class="col-sm-3">Content</div>
+		<div class="col-sm-2"><span> 6</span></div>
+		<div class="col-sm-4">Content</div>
+		<div class="col-sm-3"></div>
+	</div>
+	</h3>
+</div>
+
+
+<!-- Workportfolio -->
+
+<div id="workportfolio" class="container" style="text-align: center;">
+<br><br><br>
+	<h1><span style="color: orange;"> Our</span> Works</h1>
+
+  <div class="row work" style="padding: 15px;">
+    <div class="col-sm-6" >
+        <a href="http://www.swarashtramaza.com/" target="_blank">
+    <img class="img-responsive" src="news.jpg" style="height: 250px !important;width: 550px !important"></a>
+    </div>
+    <div class="col-sm-6">
+      <a href="http://www.travoxpress.com" target="_blank">
+    <img class="img-responsive" src="travo.jpg" width="95%" height="500px" style="height: 250px !important;width: 550px !important"></a>
+    </div>
+  </div>
+
+  <div class="row work" style="padding: 15px;">
+    <div class="col-sm-6" >
+      <a href="https://play.google.com/store/apps/details?id=com.swarajya_maza.swarajyamaza" target="_blank">
+    <img class="img-responsive" src="App.jpg" style="height: 250px !important;width: 550px !important"></a>
+    </div>
+    <div class="col-sm-6">
+    <iframe src="https://www.youtube.com/embed/tguRuy9uEPg?ecver=2" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" style="background-color: #eee;max-width: 100%;border-radius: 15px;">
+<div class="container-fluid">
+<div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="contact">
+          <h2 style="border-bottom: 4px solid #f78d2f; padding-left: 5px;font-family: cooper;"> Connect wi</h2><h2 style="border-bottom: 4px solid #007496; padding-right: 5px;font-family: cooper;">th Us </h2>
+          <p>TravoXpress's Creatives is a platform that provides all the services required for digital business. From graphic designing leading to app development,web development, software developments, photo/ video shoots and editing.Not only the creative services Tx also provides travel services.     </p>
+          <a target="_blank" href="https://www.facebook.com/travoxpress"><i class="fa fa-facebook fa-3x"></i></a>
+          <a target="_blank" href="https://www.twitter.com/travoxpress"><i class="fa fa-twitter fa-3x"></i></a>
+          <a target="_blank" href="https://www.instagram.com/travoxpress"><i class="fa fa-instagram fa-3x"></i></a>
+          <a target="_blank" href="https://plus.google.com/u/1/106230515431212549693"><i class="fa fa-google-plus fa-3x"></i></a>
+          <a target="_blank" href="https://www.youtube.com/channel/UC_9U1L-AbCefHmx94NMJKIA"><i class="fa fa-youtube fa-3x"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="background-color: #004e66;">
+			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+				<div class="contact-form">
+					<h2 style="border-bottom: 4px solid #f78d2f; padding-left: 5px;"> Drop a L</h2><h2 style="border-bottom: 4px solid #007496; padding-right: 5px;">ine ! </h2>
+					<form action="mail" method="POST">
+						<input type="text" name="name" placeholder="Name *" required>
+						<input type="email" name="email" placeholder="Email *" required>
+						<div class="relative">
+						<textarea type="text" name="message" placeholder="Message *" required></textarea>
+						<button name="contact"><i class="fa fa-paper-plane fa-2x"></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+<br><br><br><br>
+
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="contact-footer">
+          <p>Get in Touch! We'd love to hear from You.</p>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="contact-subfooter">
+              <i class="fa fa-envelope fa-3x"></i>
+              <p>admin@travoxpress.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div> 
+
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br>
+  <p>Developed and Designed By <strong>Vishal Jain</strong></p> 
+</footer>
+
+
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</body>
+</html>
+
+<!--@keyframes change { 0%, 12.66%, 100% { transform: translate3d(0, 0, 0); } 16.66%, 29.32% { transform: translate3d(0, -25%, 0); } 33.32%,45.98% { transform: translate3d(0, -50%, 0); } 49.98%,62.64% { transform: translate3d(0, -75%, 0); } 66.64%,79.3% { transform: translate3d(0, -50%, 0); } 83.3%,95.96% { transform: translate3d(0, -25%, 0); } }
+
+  .content__container__list {
+  margin-top: 0;
+  padding-left:160px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; }
+
+
+        <div class="container">
+        
+          <div class="content" style="margin-top: 60px;">
+            <div class="content__container" >
+              <p class="content__container__text">
+                Brimming with
+              </p>
+
+              <ul class="content__container__list">
+                <li class="content__container__list__item" style="color: #a8518a;">fun!</li>
+                <li class="content__container__list__item" style="color: #a8518a;">curiosity!</li>
+                <li class="content__container__list__item" style="color: #a8518a;">technology!</li>
+                <li class="content__container__list__item" style="color: #a8518a;">knowledge!</li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Of Animation -->
