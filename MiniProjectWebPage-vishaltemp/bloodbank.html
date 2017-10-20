@@ -13,8 +13,9 @@
   <link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="Style.css">
  
+  <script src="animated-hero.js"></script>
+  <link rel="stylesheet" type="text/css" href="Style.css">
 
 <script type="text/javascript">
 	  $(window).scroll(function() {
@@ -25,10 +26,14 @@
         $('.opaque-navbar').removeClass('opaque');
     }
 });
+
+
 </script>
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
 <!--Navigation Bar -->
 <nav class="navbar navbar-default navbar-fixed-top opaque-navbar">
   <div class="container-fluid">
@@ -39,17 +44,17 @@
         <span class="icon-bar"></span>                        
       </button>
 
-         <a class="navbar-brand" href="#myPage" style="height: 30px; margin-top: 0px;padding-top: 0px;"><img src="logo.png" width="100px" height="65px" style="margin-top: 0px !important;padding-top: 0px !important;display: inline;"> Welcome Donor</a>
+    <!--     <a class="navbar-brand" href="#myPage" style="display: inline;"><img src="7.jpg" width="30px" style="margin-top: 0px !important;padding-top: 0px !important;height: 30px !important;display: inline;"><p class="hidden-xs" style="display: inline;">ahf8asihfnsjdn </p></a>-->
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right" style="padding-top: 10px;">
+    <div class="collapse navbar-collapse borderYtoX" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left" style="padding-top: 10px;">
         <li><a href="#myPage">HOME</a></li>
-        <li><a href="#aboutus">ABOUT US</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#refer">Refer A Friend</a></li>
+        <li><a href="#aboutus">SEARCH DONORS</a></li>
+        <li><a href="#services">REQUEST BLOOD</a></li>
+        <li><a href="#workportfolio">BLOOD TIPS</a></li>
         <li><a href="#contact">CONTACT</a></li>
       
-        <li class="dropdown">
+        <li class="dropdown hidden-xs">
           <a href="http://phpoll.com/register" class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
             <div class="col-lg-12">
@@ -80,7 +85,7 @@
             </div>
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown hidden-xs">
           <a href="http://phpoll.com/login" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
             <div class="col-lg-12">
@@ -128,48 +133,108 @@
   </div>
 </nav>
 
+<!--Navigation ends-->
+
+
+
 <!-- HOME -->
-<div class="hero-image" ></div>
-  <div >
-  <div class="content">
-  <div class="content__container">
-    <p class="content__container__text">
-      Hello
-    </p>
-    
-    <ul class="content__container__list">
-      <li class="content__container__list__item">world !</li>
-      <li class="content__container__list__item">bob !</li>
-      <li class="content__container__list__item">users !</li>
-      <li class="content__container__list__item">everybody !</li>
-    </ul>
-  </div>
+
+<div id="highlighted">
+   <div id="search-form" class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="mod-search block">
+               <h1 class="home-image">
+                  <img alt="WebCorpCo" class="img-responsive" src="logo.png">Blood Bank
+               </h1>
+               <h2 class="home-title">
+                  <section class="cd-intro" style="user-select: auto;">
+                     <h2 class="cd-headline clip is-full-width font-accident-two-normal uppercase" style="user-select: auto;">
+                        <span style="user-select: auto;">The Company of Choice for </span>
+                        <span class="cd-words-wrapper" style="width: 81.5142px; user-select: auto; overflow: hidden;">
+                        <b class="is-visible" style="user-select: auto;">Marketing</b>
+                        <b class="is-hidden" style="user-select: auto;">Design</b>
+                        <b class="is-hidden" style="user-select: auto;">Programming</b>
+                        <b class="is-hidden" style="user-select: auto;">Training</b>
+                        </span>
+                     </h2>
+                  </section>
+               </h2>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+   <section class="heroimage-wrapper">
+      <div class="heroimage">
+      </div>
+   </section>
 </div>
-  </div>
-</div>
+<!-- Home ends -->
+
 <br><br>
 
+
 <div class="container-fluid" style="width: 90%;margin-left: 5%;margin-right: 5%;border:1px solid white;box-shadow: 12px 0 15px -4px #eee, -12px 0 8px -4px #eee;color: black;">
+	<br><br>
 
-	<div class="row" style="text-align: center;padding: 10px;">
-	<div class="col-sm-6" >
-	<h2><span style="color: orange;"> Web</span> Development</h2>
+<!--Search donor -->
+<div id="searchDonor" class="container" style="background-image: url(counter-bg.png);" >
+	<h1 style="text-align: center;"><span style="color: orange;"> Search</span> Blood Donors</h1>	
+<!--
+	<div class="sel sel--blood">
+  <select name="select-profession" id="select-profession">
+    <option value="" disabled>Profession</option>
+    <option value="hacker">Hacker</option>
+    <option value="gamer">Gamer</option>
+    <option value="developer">Developer</option>
+    <option value="programmer">Programmer</option>
+    <option value="designer">Designer</option>
+  </select>
+</div>-->
 
-	</div>
-	<div class="col-sm-6">
-		<img src="1.jpg" width="80%" height="250px">
-	</div>
-	</div>
-	<div class="row" style="text-align: center;padding: 20px;">
-	<div class="col-sm-6">
-		<img src="1.jpg" width="80%" height="250px">
-	</div>
-	<div class="col-sm-6" >
-	<h2><span style="color: orange;"> Mobile</span> Development</h2>
+	<div style="margin: 50px auto;">	
+		<form>
+		<ul style="display: inline-flex;">
+		 <li style="margin-right: 30px;"> 
+		 	<label>Blood Group *</label> <br>
+		 	<div class="select">
+		 	<select name="blood" id="blood" required=""> 
+		 		<option value="0">Select </option> 
+		 		<option value="A+">A+</option>
+		 		<option value="B+">B+</option> 
+		 		<option value="O+">O+</option> 
+		 		<option value="A-">A-</option> 
+		 		<option value="B-">B-</option> 
+		 		<option value="O-">O-</option> 
+		 		<option value="AB+">AB+</option> 
+		 		<option value="AB-">AB-</option> 
+		 	</select> 
+		 	</div>
+		 	<label for="blood" class="error"></label> 
+		 </li> 
+		 <li style="margin-right: 30px;"> 
+		 	<label>City *</label> <br>
+		 	<div class="select">
+		 	<select name="city_name" id="city_name" required=""> 
+		 		<option value="0">Select </option> 
+		 		<option value="1">Agartala</option>
+		 	</select>
+		 </div>
+		 </li>
+		 <li > <br>
+		 	<button type="submit" class="btn">Search</button>
+		 </li> 
+		</ul>
+			 <label class="checkbox" style="margin: auto 60px;"> 
+			 	<input type="checkbox" value="" required=""> 
+			 	<span class="agree-text">I have read and agree to abide by the terms and conditions </span> 
+			 </label> 
+	</form> 
 
-	</div>
-	</div>
-
+</div>
+</div>
+	
 <!-- About Us -->
 
 	<div id="aboutus" class="container" style="background-image:url(2.jpg);background-size: cover; ;text-align: center;color: white;border-radius: 10px;">
@@ -249,32 +314,8 @@
 </div>
 
 
-<!-- refer a friend  -->
+<!-- Workportfolio -->
 
-<div id="refer" class="container" style="text-align: center;">
-<br><br><br>
-	<h1>Refer a <span style="color: #8c1c1c;"> Friend</span></h1>
-
-  <div class="row work" style="padding: 15px;">
-    <div class="col-sm-6" >
-        <a href="http://www.swarashtramaza.com/" target="_blank">
-    <img class="img-responsive" src="news.jpg" style="height: 250px !important;width: 550px !important"></a>
-    </div>
-    <div class="col-sm-6">
-      <a href="http://www.travoxpress.com" target="_blank">
-    <img class="img-responsive" src="travo.jpg" width="95%" height="500px" style="height: 250px !important;width: 550px !important"></a>
-    </div>
-  </div>
-
-  <div class="row work" style="padding: 15px;">
-    <div class="col-sm-6" >
-      <a href="https://play.google.com/store/apps/details?id=com.swarajya_maza.swarajyamaza" target="_blank">
-    <img class="img-responsive" src="App.jpg" style="height: 250px !important;width: 550px !important"></a>
-    </div>
-    <div class="col-sm-6">
-    <iframe src="https://www.youtube.com/embed/tguRuy9uEPg?ecver=2" allowfullscreen></iframe>
-    </div>
-  </div>
 
 
 
@@ -328,8 +369,7 @@
     </div>
 </div>
 </div> 
-
-
+</div>
 <footer class="text-center">
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>

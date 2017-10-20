@@ -11,6 +11,9 @@
       width: 100%;
   }
   
+
+/*Navigation */
+
   .nav-tabs li a {
       color: #777;
   }
@@ -20,11 +23,10 @@
       margin: 0;
       background-color: #2d2d30;
       border: 0;
-      font-size: 13px !important;
+      font-size: 15px !important;
       letter-spacing: 4px;
       opacity: 0.9;
       line-height: 20px;
-      
       text-align: center;
   }
 
@@ -38,12 +40,14 @@
       line-height: 10px;
   }
 
-  .navbar-nav li a:hover {
+  /*.navbar-nav li a:hover {
       color: #ffffff !important;
       border-bottom: 3px solid orange;
-  	}
+  	}*/
 
-
+    .navbar-nav{
+      margin-left: 10%;
+    }
 
 	.navbar-nav li.active a {
       color: orange !important;
@@ -66,7 +70,41 @@
     transition: background-color .5s ease 0s;
 }
 
-/* General sizing */
+
+/* Border from Y to X  */
+div.borderYtoX a:before, div.borderYtoX a:after
+{
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: orange;
+    transition: all 0.3s;
+}
+
+div.borderYtoX a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div.borderYtoX a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+
+/* Navigation Ends */
+
+/* Login Register */
 ul.dropdown-lr {
   width: 300px;
 }
@@ -80,6 +118,268 @@ ul.dropdown-lr {
     color: #eee;
   }
 }
+
+
+/* HOME PAGE */
+#search-form {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#search-form {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    background-color: #2e2e2e;
+    background-color: rgba(46,46,46,0.85);
+    max-width: 800px;
+    padding: 20px 20px 0;
+    text-align: center;
+    z-index: 1;
+}
+.home-image {
+    text-align: center;
+    display: inline-block;
+    color: #830303;
+    
+}
+.home-title {
+    font-family: Arial, Helvetica, Sans-Serif;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+h2.home-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+h3.home-title {
+  font-size: 17px;
+  margin-top: 40px;
+  
+}
+.home-title a {
+  color: #22adea;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+.home-title a:hover {
+  color: #F0AD4E;
+}
+h1.home-image img {
+    margin-left :auto ;
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding-right: 10px;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.mod-search {
+    padding-bottom: 30px;
+}
+
+.heroimage {
+    margin-bottom: 0px;
+  background-image: url(bg1.jpg);
+  background-size: cover;
+  position: relative;
+  width: 100%;
+    min-height: 600px;
+}
+@media screen and (max-width: 768px) {
+    .hero-form select {
+    width: 100%;
+  }
+}
+/*
+body {
+  display: block;
+  background-color: #e7e7e7;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #2f2f2f;
+  font: 13px/1.7 "Raleway", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+*/
+.cd-intro {
+  width: 90%;
+  max-width: 768px; }
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+ }
+.cd-words-wrapper b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    font-weight: 400;
+    left: 0;
+    top: 0;
+    text-transform: uppercase;
+    color: orange;
+ }
+  .cd-words-wrapper b.is-visible {
+    position: relative; }
+
+.no-js .cd-words-wrapper b {
+  opacity: 0; }
+
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1; }
+
+.cd-headline.clip span {
+  display: inline-block;
+  padding: .2em 0; }
+
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top; }
+
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 2px;
+  height: 80%;
+  background-color: #cfcfcf; }
+
+.cd-headline.clip b {
+  opacity: 0; }
+
+.cd-headline.clip b.is-visible {
+  opacity: 1; }
+
+/*HOME ENDS */
+
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 4px !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: orange;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+.select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+
+/* Button */
+
+.btn{
+  position: relative;
+  //display:block;
+  height: 45px;
+  width: 150px;
+  margin: 3px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: orange;
+  border: 2px orange solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+
+.btn:hover{
+  background-color: orange;
+  color: black;
+}
+
+/*Search Donor 
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 39px;
+   
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+  
+   font-size: 14px;
+   height: 49px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE 
+   width: 268px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+} */
   
   footer {
       background-color: #2d2d30;
@@ -95,7 +395,7 @@ ul.dropdown-lr {
       text-decoration: none;
   }  
 
-.hero-image {
+/*.hero-image {
     background-image: url("bg1.jpg");
     height: 100%;
     background-position: center;
@@ -133,7 +433,7 @@ ul.dropdown-lr {
     font-weight: 600;
     overflow: hidden;
     height: 40px;
-    padding: 0 10px;
+    padding: 0 40px;
 }
     .content__container:before {
       content: '[';
@@ -244,6 +544,7 @@ ul.dropdown-lr {
   83.3%,95.96% {transform:translate3d(0,-25%,0);}
 }
 
+*/
 
 .row .fa{
 	
@@ -423,7 +724,7 @@ p{
 
 
 
-@media(max-width: 700px){
+@media(max-width: 768px){
 
   html,body{
     margin: 0px;
